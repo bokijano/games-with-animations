@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.google-fonts {
+  font-family: "Anton", sans-serif;
+  font-family: "Lobster", cursive;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.games {
+  position: absolute;
+  font-family: "Anton", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotate(-25deg) skew(25deg);
+  top: 30%;
+  left: 50%;
+  .memory {
+    margin-top: -170px;
+    margin-left: -20px;
+    &:hover {
+      span {
+        background-color: #ff7f66;
+      }
+      span:nth-child(5):before {
+        background-color: #ff7f66;
+      }
+      span:nth-child(5):after {
+        background-color: #ff7f66;
+      }
+    }
+  }
+  .tetris {
+    margin-top: 20px;
+    margin-left: 70px;
+    &:hover {
+      span {
+        background-color: #4717f6;
+      }
+      span:nth-child(5):before {
+        background-color: #4717f6;
+      }
+      span:nth-child(5):after {
+        background-color: #4717f6;
+      }
+    }
+  }
+  .brick {
+    margin-top: 400px;
+    margin-left: -150px;
+    &:hover {
+      span {
+        background-color: #a239ca;
+      }
+      span:nth-child(5):before {
+        background-color: #a239ca;
+      }
+      span:nth-child(5):after {
+        background-color: #a239ca;
+      }
+    }
+  }
+  a {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span:nth-child(5) {
+      color: whitesmoke;
+      transform: translate(20px, -20px);
+      background-color: #2185c8;
+      box-shadow: -1px 1px 1px #2185c8;
+    }
+    span:nth-child(4) {
+      transform: translate(15px, -15px);
+      background-color: #7ecefd;
+      box-shadow: -1px 1px 1px #7ecefd;
+    }
+    span:nth-child(3) {
+      transform: translate(10px, -10px);
+      background-color: #a239ca;
+      box-shadow: -1px 1px 1px #a239ca;
+    }
+    span:nth-child(2) {
+      transform: translate(5px, -5px);
+      background-color: #ff7f66;
+      box-shadow: -1px 1px 1px #ff7f66;
+    }
+    span:nth-child(1) {
+      transform: translate(0px, 0px);
+      background-color: #4717f6;
+      box-shadow: -1px 1px 1px #4717f6;
+    }
+    &:hover,
+    &:active {
+      position: relative;
+      transform: translate(20px, -20px);
+      box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+      span {
+        box-shadow: none;
+      }
+      span:nth-child(5):before {
+        content: "";
+        position: absolute;
+        top: 12.5px;
+        left: -25px;
+        height: 100%;
+        width: 25px;
+        transform: rotate(0deg) skewY(-45deg);
+      }
+      span:nth-child(5):after {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: -12.5px;
+        width: 100%;
+        height: 25px;
+        transform: rotate(0deg) skewX(-45deg);
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    .memory {
+      margin-top: 150px;
+      margin-left: 20px;
+    }
+    .tetris {
+      margin-top: 50px;
+      margin-left: -150px;
+    }
+    .brick {
+      margin-top: 80px;
+      margin-left: -200px;
+    }
+  }
+}

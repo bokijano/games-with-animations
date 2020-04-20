@@ -1,0 +1,17 @@
+{
+  "name": "games-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bokijano.github.io/games-with-animations",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}

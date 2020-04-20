@@ -18,6 +18,12 @@ const colors = [
 let gravity = 1;
 let friction = 0.7;
 
+function touchEvent() {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+
+  init();
+}
 // Event Listeners
 addEventListener("resize", () => {
   canvas.width = innerWidth;
@@ -27,6 +33,11 @@ addEventListener("resize", () => {
 });
 
 addEventListener("click", function () {});
+
+addEventListener("touchstart", touchEvent, false);
+addEventListener("touchmove", touchEvent, false);
+addEventListener("touchend", touchEvent, false);
+addEventListener("touchcancel", touchEvent, false);
 
 // Utility Functions
 function randomIntFromRange(min, max) {
@@ -51,7 +62,7 @@ function Ball(x, y, dx, dy, radius, color) {
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     ctx.fillStyle = this.color;
     ctx.fill();
-    ctx.stroke();
+    //ctx.stroke();
     ctx.closePath();
   };
   this.update = function () {

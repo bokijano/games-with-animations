@@ -14,16 +14,21 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 canvas {
-  position: relative;
-  width: 100%;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .games {
-  position: absolute;
+  display: "block";
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
   font-family: "Anton", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,13 +43,10 @@ canvas {
           transform-style: preserve-3d;
   -webkit-transform: translate(-50%, -50%) rotate(-25deg) skew(25deg);
           transform: translate(-50%, -50%) rotate(-25deg) skew(25deg);
-  top: 30%;
-  left: 50%;
 }
 
 .games .memory {
-  margin-top: -170px;
-  margin-left: -20px;
+  margin-left: 20px;
 }
 
 .games .memory:hover span {
@@ -209,22 +211,26 @@ canvas {
 
 @media screen and (max-width: 768px) {
   .games {
+    margin-left: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .games a {
+    width: 150px;
+    height: 100px;
+  }
   .games .memory {
-    margin-top: 150px;
-    margin-left: 20px;
+    margin-left: 50px;
   }
   .games .tetris {
     margin-top: 50px;
-    margin-left: -150px;
+    margin-left: -50px;
   }
   .games .brick {
-    margin-top: 80px;
-    margin-left: -200px;
+    margin-top: 40px;
+    margin-right: 100px;
   }
 }
 /*# sourceMappingURL=games.css.map */

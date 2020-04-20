@@ -44,10 +44,10 @@ canvas {
         background-color: #ff7f66;
       }
       span:nth-child(5):before {
-        background-color: #ff7f66;
+        background-color: #b35846;
       }
       span:nth-child(5):after {
-        background-color: #ff7f66;
+        background-color: #b35846;
       }
     }
   }
@@ -59,10 +59,10 @@ canvas {
         background-color: #4717f6;
       }
       span:nth-child(5):before {
-        background-color: #4717f6;
+        background-color: #251369;
       }
       span:nth-child(5):after {
-        background-color: #4717f6;
+        background-color: #251369;
       }
     }
   }
@@ -74,10 +74,10 @@ canvas {
         background-color: #a239ca;
       }
       span:nth-child(5):before {
-        background-color: #a239ca;
+        background-color: #6c2488;
       }
       span:nth-child(5):after {
-        background-color: #a239ca;
+        background-color: #6c2488;
       }
     }
   }
@@ -158,7 +158,26 @@ canvas {
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
+    margin-left: 5px;
+    flex-direction: column;
+    a {
+      width: 150px;
+      height: 100px;
+    }
+    .memory {
+      margin-left: 5px;
+    }
+    .tetris {
+      margin-top: 50px;
+      margin-left: 300px;
+    }
+    .brick {
+      margin-top: -110px;
+      margin-right: 150px;
+    }
+  }
+  @media screen and (max-width: 600px) {
     margin-left: 50px;
     flex-direction: column;
     a {

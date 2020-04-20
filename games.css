@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.google-fonts {
+  font-family: "Anton", sans-serif;
+  font-family: "Lobster", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.games {
+  position: absolute;
+  font-family: "Anton", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate(-50%, -50%) rotate(-25deg) skew(25deg);
+          transform: translate(-50%, -50%) rotate(-25deg) skew(25deg);
+  top: 30%;
+  left: 50%;
+}
+
+.games .memory {
+  margin-top: -170px;
+  margin-left: -20px;
+}
+
+.games .memory:hover span {
+  background-color: #ff7f66;
+}
+
+.games .memory:hover span:nth-child(5):before {
+  background-color: #ff7f66;
+}
+
+.games .memory:hover span:nth-child(5):after {
+  background-color: #ff7f66;
+}
+
+.games .tetris {
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+.games .tetris:hover span {
+  background-color: #4717f6;
+}
+
+.games .tetris:hover span:nth-child(5):before {
+  background-color: #4717f6;
+}
+
+.games .tetris:hover span:nth-child(5):after {
+  background-color: #4717f6;
+}
+
+.games .brick {
+  margin-top: 400px;
+  margin-left: -150px;
+}
+
+.games .brick:hover span {
+  background-color: #a239ca;
+}
+
+.games .brick:hover span:nth-child(5):before {
+  background-color: #a239ca;
+}
+
+.games .brick:hover span:nth-child(5):after {
+  background-color: #a239ca;
+}
+
+.games a {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 5px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.games a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.games a span:nth-child(5) {
+  color: whitesmoke;
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+  background-color: #2185c8;
+  -webkit-box-shadow: -1px 1px 1px #2185c8;
+          box-shadow: -1px 1px 1px #2185c8;
+}
+
+.games a span:nth-child(4) {
+  -webkit-transform: translate(15px, -15px);
+          transform: translate(15px, -15px);
+  background-color: #7ecefd;
+  -webkit-box-shadow: -1px 1px 1px #7ecefd;
+          box-shadow: -1px 1px 1px #7ecefd;
+}
+
+.games a span:nth-child(3) {
+  -webkit-transform: translate(10px, -10px);
+          transform: translate(10px, -10px);
+  background-color: #a239ca;
+  -webkit-box-shadow: -1px 1px 1px #a239ca;
+          box-shadow: -1px 1px 1px #a239ca;
+}
+
+.games a span:nth-child(2) {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  background-color: #ff7f66;
+  -webkit-box-shadow: -1px 1px 1px #ff7f66;
+          box-shadow: -1px 1px 1px #ff7f66;
+}
+
+.games a span:nth-child(1) {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  background-color: #4717f6;
+  -webkit-box-shadow: -1px 1px 1px #4717f6;
+          box-shadow: -1px 1px 1px #4717f6;
+}
+
+.games a:hover, .games a:active {
+  position: relative;
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+  -webkit-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.games a:hover span, .games a:active span {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.games a:hover span:nth-child(5):before, .games a:active span:nth-child(5):before {
+  content: "";
+  position: absolute;
+  top: 12.5px;
+  left: -25px;
+  height: 100%;
+  width: 25px;
+  -webkit-transform: rotate(0deg) skewY(-45deg);
+          transform: rotate(0deg) skewY(-45deg);
+}
+
+.games a:hover span:nth-child(5):after, .games a:active span:nth-child(5):after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: -12.5px;
+  width: 100%;
+  height: 25px;
+  -webkit-transform: rotate(0deg) skewX(-45deg);
+          transform: rotate(0deg) skewX(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .games {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .games .memory {
+    margin-top: 150px;
+    margin-left: 20px;
+  }
+  .games .tetris {
+    margin-top: 50px;
+    margin-left: -150px;
+  }
+  .games .brick {
+    margin-top: 80px;
+    margin-left: -200px;
+  }
+}
+/*# sourceMappingURL=games.css.map */

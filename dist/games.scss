@@ -11,27 +11,34 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 canvas {
-  position: relative;
-  width: 100%;
   margin: 0;
+  box-sizing: border-box;
+  // @media screen and (max-width: 768px) {
+  //  max-width: 768px;
+  //  max-height: 100%;
+  //  overflow: hidden;
+  //}
 }
 
 .games {
-  position: absolute;
+  display: "block";
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
   font-family: "Anton", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transform-style: preserve-3d;
   transform: translate(-50%, -50%) rotate(-25deg) skew(25deg);
-  top: 30%;
-  left: 50%;
   .memory {
-    margin-top: -170px;
-    margin-left: -20px;
+    //margin-top: -170px;
+    margin-left: 20px;
     &:hover {
       span {
         background-color: #ff7f66;
@@ -152,18 +159,22 @@ canvas {
     }
   }
   @media screen and (max-width: 768px) {
+    margin-left: 50px;
     flex-direction: column;
+    a {
+      width: 150px;
+      height: 100px;
+    }
     .memory {
-      margin-top: 150px;
-      margin-left: 20px;
+      margin-left: 50px;
     }
     .tetris {
       margin-top: 50px;
-      margin-left: -150px;
+      margin-left: -50px;
     }
     .brick {
-      margin-top: 80px;
-      margin-left: -200px;
+      margin-top: 40px;
+      margin-right: 100px;
     }
   }
 }

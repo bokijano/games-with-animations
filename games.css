@@ -223,14 +223,15 @@ canvas {
   }
   .games .memory {
     margin-left: 5px;
+    margin-top: 10px;
   }
   .games .tetris {
     margin-top: 50px;
     margin-left: 300px;
   }
   .games .brick {
-    margin-top: -110px;
-    margin-right: 150px;
+    margin-top: -150px;
+    margin-right: 200px;
   }
 }
 

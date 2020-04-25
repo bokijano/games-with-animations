@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="creative.png" type="image/x-icon" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <title>Memory Games</title>
+
+    <link rel="stylesheet" href="memory.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="neon" data-text="Memory Games">Memory Games</h1>
+      <section class="btn-games">
+        <!-- food memory game -->
+        <div class="click-style" onclick="memoryFood()">
+          <img src="memory pictures/food/food.png" alt="" />
+          <span>Food</span>
+          <div style="background: #e87e1c;" class="liquid"></div>
+        </div>
+        <!-- sport memory game -->
+        <div class="click-style" onclick="memorySport()">
+          <img src="memory pictures/sport/cricket.png" alt="" />
+          <span>sport</span>
+          <div style="background: #47ff2b;" class="liquid"></div>
+        </div>
+        <!-- actors memory game -->
+        <div class="click-style" onclick="memoryActors()">
+          <img src="memory pictures/actors/actors.png" alt="" />
+          <span>Actors</span>
+          <div style="background: #ff481f;" class="liquid"></div>
+        </div>
+        <!-- card memory game -->
+        <div class="click-style" onclick="memoryCards()">
+          <img
+            style="width: 75px;"
+            src="memory pictures/cards/card-deck.png"
+            alt=""
+          />
+          <span>cards</span>
+          <div style="background: #8344ea;" class="liquid"></div>
+        </div>
+      </section>
+      <a class="home-page" href="./../index.html">back to home page</a>
+      <div class="food"></div>
+      <div class="actors"></div>
+      <div class="sport"></div>
+      <div class="cards"></div>
+    </main>
+
+    <script src="memory data/cardsData.js"></script>
+    <script src="memory data/sportData.js"></script>
+    <script src="memory data/foodData.js"></script>
+    <script src="memory data/actorsData.js"></script>
+    <script src="memory.js"></script>
+  </body>
+</html>

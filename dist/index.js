@@ -21,7 +21,7 @@ let friction = 0.8;
 // back to home page
 function hideHomePage() {
   stopTetris();
-  draw();
+  playground.forEach((row) => row.fill(0));
   tetrisGame.style.display = "block";
   homePage.style.display = "none";
 

@@ -16,7 +16,27 @@ const colors = [
 ];
 
 let gravity = 1;
-let friction = 0.7;
+let friction = 0.8;
+
+// back to home page
+function hideHomePage() {
+  stopTetris();
+  draw();
+  tetrisGame.style.display = "block";
+  homePage.style.display = "none";
+
+  const newGame = document.createElement("img");
+
+  newGame.setAttribute("class", "new-game");
+  newGame.setAttribute("src", "tetris/pictures/white-play.png");
+  newGame.onclick = function () {
+    newGame.style.display = "none";
+    playerReset();
+    continueGame();
+  };
+  tetrisGame.appendChild(newGame);
+  touchEvent();
+}
 
 function touchEvent() {
   canvas.width = innerWidth;
@@ -31,6 +51,8 @@ addEventListener("resize", () => {
 
   init();
 });
+
+//addEventListener("onload", () => init());
 
 addEventListener("click", function () {});
 

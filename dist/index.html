@@ -10,37 +10,96 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="games.css" />
+    <link rel="stylesheet" href="tetris/tetris.css" />
     <title>Games and Canvas</title>
   </head>
   <body>
-    <canvas></canvas>
+    <!-- home page -->
+    <div class="home-page">
+      <canvas></canvas>
 
-    <section class="games">
-      <a class="memory" href="memory games/memory.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span>Memory games</span>
-      </a>
+      <section class="games">
+        <a class="memory" href="memory games/memory.html">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>Memory games</span>
+        </a>
 
-      <a class="tetris" href="">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span>Tetris</span>
-      </a>
+        <a onclick="hideHomePage()" class="tetris" href="#playTetris">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>Tetris</span>
+        </a>
 
-      <a class="brick" href="">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span>Brick breaker</span>
-      </a>
-    </section>
+        <a class="brick" href="">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>Brick breaker</span>
+        </a>
+      </section>
+    </div>
+    <!-- end of home page -->
 
+    <!-- tetris game -->
+    <div id="playTetris" class="tetris-game">
+      <section class="tetris-option">
+        <h3>Score: <span id="score">0</span></h3>
+        <img
+          onclick="stopTetris()"
+          class="pause"
+          src="tetris/pictures/pause.png"
+          alt="pause"
+        />
+        <img
+          onclick="continueGame()"
+          class="play"
+          src="tetris/pictures/play.png"
+          alt="play"
+        />
+      </section>
+      <canvas id="tetris"></canvas>
+      <section class="tetris-move">
+        <img
+          onclick="playerMove(-1)"
+          src="tetris/pictures/arrow-left.png"
+          alt="left arrow"
+          class="left"
+        />
+        <img
+          onclick="pieceRotate(-1)"
+          src="tetris/pictures/rotate-left.png"
+          alt="rotate left"
+          class="rotate"
+        />
+        <img
+          onclick="pieceRotate(1)"
+          src="tetris/pictures/rotate-right.png"
+          alt="rotate right"
+          class="rotate"
+        />
+        <img
+          onclick="playerMove(1)"
+          src="tetris/pictures/arrow-right.png"
+          alt="right arrow"
+          class="right"
+        />
+        <img
+          onclick="playerDrop()"
+          src="tetris/pictures/down-arrow.png"
+          alt="arrow down"
+          class="down"
+        />
+      </section>
+    </div>
+    <!-- end of teris game -->
+
+    <script src="tetris/tetris.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

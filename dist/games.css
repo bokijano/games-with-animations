@@ -17,6 +17,10 @@ body {
   position: relative;
 }
 
+.home-page {
+  display: block;
+}
+
 canvas {
   margin: 0;
   -webkit-box-sizing: border-box;

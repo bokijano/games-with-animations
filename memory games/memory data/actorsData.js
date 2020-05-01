@@ -80,11 +80,11 @@ const actorsData = [
     name: "Marilyn",
   },
   {
-    img: "./memory pictures/actors/maia-mitchell.png",
+    img: "./memory pictures/actors/ryan-gosling.png",
     name: "Ryan",
   },
   {
-    img: "./memory pictures/actors/maia-mitchell.png",
+    img: "./memory pictures/actors/ryan-gosling.png",
     name: "Ryan",
   },
   {

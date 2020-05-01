@@ -9,7 +9,6 @@ backBtn.setAttribute("class", "home-btn");
 backBtn.onclick = function () {
   tetrisGame.style.display = "none";
   homePage.style.display = "block";
-  draw();
   playerReset();
 };
 
@@ -24,6 +23,11 @@ const context = canvasTetris.getContext("2d");
 context.scale(20, 20);
 
 const playground = createMatrix(12, 20);
+
+let dropCounter = 0;
+let dropInterval = 1000;
+
+let lastUpdate = 0;
 
 let startTetris = false;
 let pause = window.cancelAnimationFrame;
@@ -172,11 +176,12 @@ function playerReset() {
     newGame.setAttribute("class", "new-game");
     newGame.setAttribute("src", "tetris/pictures/white-play.png");
     newGame.onclick = function () {
+      playground.forEach((row) => row.fill(0));
       newGame.style.display = "none";
       gameOver.style.display = "none";
       continueGame();
-      playground.forEach((row) => row.fill(0));
       player.score = 0;
+      dropInterval = 1000;
       updateScore();
       update();
     };
@@ -253,10 +258,6 @@ function updateScore() {
 }
 
 // update function
-let dropCounter = 0;
-let dropInterval = 1000;
-
-let lastUpdate = 0;
 
 function update(time = 0) {
   const deltaTime = time - lastUpdate;
@@ -285,6 +286,9 @@ function update(time = 0) {
   if (player.score >= 1200) {
     dropInterval = 200;
   }
+  if (player.score >= 1500) {
+    dropInterval = 100;
+  }
 
   draw();
   if (continueTetris) {
@@ -299,7 +303,7 @@ function stopTetris() {
 
 // continue playing tetris
 function continueGame() {
-  continueTetris = true;
+  continueTetris = !continueTetris;
   update();
 }
 

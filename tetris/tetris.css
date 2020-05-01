@@ -6,7 +6,7 @@
 }
 
 .tetris-game {
-  display: block;
+  display: none;
   position: relative;
   text-align: center;
   height: 100vh;
@@ -34,6 +34,7 @@
           transform: translate(-50%, -50%);
   width: 70px;
   margin-top: 50px;
+  outline: none;
 }
 
 .tetris-game canvas {
@@ -71,6 +72,12 @@
   width: 50px;
   cursor: pointer;
   background-color: transparent;
+  border-radius: 50%;
+}
+
+.tetris-game .tetris-option .pause:focus,
+.tetris-game .tetris-option .play:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -80,7 +87,7 @@
 }
 
 .tetris-game .tetris-move {
-  width: 210px;
+  width: 300px;
   margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,8 +107,8 @@
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
-  margin: 5px;
-  width: 40px;
+  margin: 10px;
+  width: 50px;
   background-color: transparent;
 }
 

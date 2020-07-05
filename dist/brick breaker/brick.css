@@ -1,0 +1,197 @@
+.brick-game {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brick-game .stats {
+  width: 400px;
+  height: 40px;
+  margin: 5px auto 5px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.brick-game .stats .life-stats,
+.brick-game .stats .level-stats,
+.brick-game .stats .score-stats {
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brick-game .stats .life-stats #lifeImg,
+.brick-game .stats .life-stats #levelImg,
+.brick-game .stats .life-stats #scoreImg,
+.brick-game .stats .level-stats #lifeImg,
+.brick-game .stats .level-stats #levelImg,
+.brick-game .stats .level-stats #scoreImg,
+.brick-game .stats .score-stats #lifeImg,
+.brick-game .stats .score-stats #levelImg,
+.brick-game .stats .score-stats #scoreImg {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-size: cover;
+}
+
+.brick-game .stats .life-stats #lifeImg,
+.brick-game .stats .level-stats #lifeImg,
+.brick-game .stats .score-stats #lifeImg {
+  background-image: url("img/life.png");
+}
+
+.brick-game .stats .life-stats #scoreImg,
+.brick-game .stats .level-stats #scoreImg,
+.brick-game .stats .score-stats #scoreImg {
+  background-image: url("img/score.png");
+}
+
+.brick-game .stats .life-stats #levelImg,
+.brick-game .stats .level-stats #levelImg,
+.brick-game .stats .score-stats #levelImg {
+  background-image: url("img/level.png");
+}
+
+.brick-game .stats .life-stats #lifeCount,
+.brick-game .stats .life-stats #levelCount,
+.brick-game .stats .life-stats #scoreCount,
+.brick-game .stats .level-stats #lifeCount,
+.brick-game .stats .level-stats #levelCount,
+.brick-game .stats .level-stats #scoreCount,
+.brick-game .stats .score-stats #lifeCount,
+.brick-game .stats .score-stats #levelCount,
+.brick-game .stats .score-stats #scoreCount {
+  padding-left: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Lobster", cursive;
+}
+
+.brick-game .stats .close-bricks {
+  cursor: pointer;
+  float: right;
+  font-size: 70px;
+  font-weight: bolder;
+  background-color: transparent;
+  margin-right: -40px;
+  margin-top: -20px;
+}
+
+.brick-game #playBrickCvs {
+  border: 5px solid dodgerblue;
+  -webkit-box-shadow: 10px 10px 30px;
+          box-shadow: 10px 10px 30px;
+  background: url("img/background3.jpg");
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.brick-game .lose,
+.brick-game .win {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.brick-game .lose button,
+.brick-game .win button {
+  cursor: pointer;
+  margin-top: 3px;
+  padding: 5px;
+  color: #333;
+  font-weight: bolder;
+  background: whitesmoke;
+  border: none;
+  border-radius: 5px;
+}
+
+.brick-game .lose button:focus,
+.brick-game .win button:focus {
+  outline: none;
+}
+
+.brick-game .lose {
+  background-image: url("img/gameover1.png");
+  display: none;
+}
+
+.brick-game .lose h1 {
+  color: whitesmoke;
+  margin-top: 120px;
+}
+
+.brick-game .win {
+  display: none;
+  background-image: url("img/youwin.png");
+  background-size: contain;
+}
+
+.brick-game .win button {
+  margin-top: 200px;
+}
+
+.brick-game .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  -webkit-box-shadow: 10px 10px 30px whitesmoke;
+          box-shadow: 10px 10px 30px whitesmoke;
+}
+
+.brick-game .controls .left-move,
+.brick-game .controls .right-move {
+  margin: 10px 20px 0 20px;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+}
+
+.brick-game .controls .left-move {
+  background-image: url("./../tetris/pictures/arrow-left.png");
+}
+
+.brick-game .controls .right-move {
+  background-image: url("./../tetris/pictures/arrow-right.png");
+}
+
+.brick-game .controls:focus {
+  outline: none;
+}
+/*# sourceMappingURL=brick.css.map */

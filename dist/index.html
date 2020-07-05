@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="games.css" />
     <link rel="stylesheet" href="tetris/tetris.css" />
+    <link rel="stylesheet" href="brick breaker/brick.css" />
     <title>Games and Canvas</title>
   </head>
   <body>
@@ -35,7 +36,7 @@
           <span>Tetris</span>
         </a>
 
-        <a class="brick" href="">
+        <a onclick="playBrickBreaker()" class="brick" href="#playBrick">
           <span></span>
           <span></span>
           <span></span>
@@ -50,12 +51,6 @@
     <div id="playTetris" class="tetris-game">
       <section class="tetris-option">
         <h3>Score: <span id="score">0</span></h3>
-        <!--<img
-          onclick="stopTetris()"
-          class="pause"
-          src="tetris/pictures/pause.png"
-          alt="pause"
-        />-->
         <img
           onclick="continueGame()"
           class="play"
@@ -99,6 +94,18 @@
     </div>
     <!-- end of teris game -->
 
+    <!-- brick breaker game -->
+    <div id="playBrick" class="brick-game">
+      <div class="stats"></div>
+      <canvas id="playBrickCvs" width="400" height="500"> </canvas>
+      <div class="lose"></div>
+      <div class="win"></div>
+      <div class="controls"></div>
+    </div>
+    <!-- end of brick breaker game -->
+
+    <script src="brick breaker/stats.js"></script>
+    <script src="brick breaker/brick.js"></script>
     <script src="tetris/tetris.js"></script>
     <script src="index.js"></script>
   </body>

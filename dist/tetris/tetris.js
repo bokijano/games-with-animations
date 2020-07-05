@@ -1,5 +1,3 @@
-const tetrisGame = document.querySelector(".tetris-game");
-const homePage = document.querySelector(".home-page");
 const tetrisMove = document.querySelector(".tetris-move");
 const tetrisOption = document.querySelector(".tetris-option");
 

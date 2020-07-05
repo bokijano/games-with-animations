@@ -204,6 +204,7 @@ main .btn-games .click-style:focus {
 }
 
 main .home-page {
+  position: relative;
   text-transform: capitalize;
   text-align: center;
   text-decoration: none;

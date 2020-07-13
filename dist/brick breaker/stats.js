@@ -4,6 +4,7 @@ const playBrick = document.querySelector(".brick-game");
 const brickStats = document.querySelector(".stats");
 const brickControls = document.querySelector(".controls");
 
+const playGame = document.querySelector(".play-game");
 const loseGame = document.querySelector(".lose");
 const winGame = document.querySelector(".win");
 
@@ -61,6 +62,7 @@ closeBrick.innerHTML = "&times";
 closeBrick.onclick = function () {
   homePage.style.display = "block";
   playBrick.style.display = "none";
+  location.reload();
 };
 brickStats.appendChild(closeBrick);
 

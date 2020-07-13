@@ -5,7 +5,25 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-
+  .play-game {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .play-brick {
+      cursor: pointer;
+      width: 100px;
+      padding: 10px;
+      text-transform: uppercase;
+      font-weight: bolder;
+      border-radius: 15px;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
   .stats {
     width: 400px;
     height: 40px;
@@ -51,8 +69,11 @@
       font-size: 70px;
       font-weight: bolder;
       background-color: transparent;
-      margin-right: -40px;
-      margin-top: -20px;
+      //margin-right: -40px;
+      margin-top: -15px;
+    }
+    @media screen and (max-width: 360px) {
+      width: 360px;
     }
   }
   #playBrickCvs {
@@ -113,7 +134,9 @@
     box-shadow: 10px 10px 30px whitesmoke;
     .left-move,
     .right-move {
-      margin: 10px 20px 0 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 5px 20px 0 20px;
       cursor: pointer;
       width: 70px;
       height: 70px;

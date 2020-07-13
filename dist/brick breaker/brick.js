@@ -4,11 +4,25 @@ tetrisGame.style.display = "none";
 //homePage.style.display = "none";
 playBrick.style.display = "none";
 
+let GAME_OVER = true;
+
 // display and exit from brick breaker
 function playBrickBreaker() {
   tetrisGame.style.display = "none";
   homePage.style.display = "none";
   playBrick.style.display = "block";
+
+  const playBrickGame = document.createElement("button");
+  playBrickGame.setAttribute("class", "play-brick");
+  playBrickGame.innerHTML = "play";
+
+  playBrickGame.onclick = function () {
+    playGame.style.display = "none";
+    GAME_OVER = false;
+    loop();
+  };
+
+  playGame.appendChild(playBrickGame);
 }
 
 // canvas Brick Breaker game
@@ -31,8 +45,6 @@ const SCORE_UNIT = 10;
 
 let LEVEL = 1;
 const MAX_LEVEL = 3;
-
-let GAME_OVER = false;
 
 let leftArrow = false;
 let rightArrow = false;
@@ -191,9 +203,9 @@ function resetBall() {
 const brick0 = {
   row: 4,
   column: 5,
-  width: 55,
+  width: 50,
   height: 15,
-  offsetLeft: 20,
+  offsetLeft: 15,
   offsetTop: 10,
   marginTop: 20,
   fillColor: "yellow",
@@ -203,9 +215,9 @@ const brick0 = {
 const brick1 = {
   row: 2,
   column: 5,
-  width: 55,
+  width: 50,
   height: 15,
-  offsetLeft: 20,
+  offsetLeft: 15,
   offsetTop: 10,
   marginTop: 20,
   fillColor: "purple",
@@ -292,11 +304,6 @@ function gameOver() {
   }
 }
 
-// play again button
-playAgain.addEventListener("click", function () {
-  location.reload();
-});
-
 // level up function
 function levelUp() {
   let levelDone = true;
@@ -338,7 +345,6 @@ function updateBreaker() {
   gameOver();
 
   levelUp();
-  //levelUp(brick1);
 }
 
 // game loop
@@ -354,4 +360,25 @@ function loop() {
     requestAnimationFrame(loop);
   }
 }
+
+// play again button
+playAgain.addEventListener("click", function () {
+  GAME_OVER = false;
+  LIFE = 3;
+
+  SCORE = 0;
+  LEVEL = 1;
+  brick0.row = 4;
+  createBricks(brick0);
+  createBricks(brick1);
+  loop();
+  loseGame.style.display = "none";
+  winGame.style.display = "none";
+  resetBall();
+  playBrickBreaker();
+  levelCount.innerHTML = LEVEL;
+  scoreCount.innerHTML = SCORE;
+  lifeCount.innerHTML = LIFE;
+});
+
 loop();

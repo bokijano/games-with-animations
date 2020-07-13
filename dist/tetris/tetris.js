@@ -5,6 +5,7 @@ let backBtn = document.createElement("button");
 backBtn.innerHTML = "home page";
 backBtn.setAttribute("class", "home-btn");
 backBtn.onclick = function () {
+  location.reload();
   tetrisGame.style.display = "none";
   homePage.style.display = "block";
   playerReset();

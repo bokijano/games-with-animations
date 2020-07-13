@@ -70,9 +70,12 @@
       font-weight: bolder;
       background-color: transparent;
       //margin-right: -40px;
-      margin-top: -15px;
+      margin-top: -18px;
     }
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 768px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 361px) {
       width: 360px;
     }
   }
@@ -141,6 +144,11 @@
       width: 70px;
       height: 70px;
       background-size: cover;
+      @media screen and (max-width: 768px) {
+        margin: 35px 20px 0 20px;
+        width: 100px;
+        height: 100px;
+      }
     }
     .left-move {
       background-image: url("./../tetris/pictures/arrow-left.png");

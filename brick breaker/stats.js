@@ -78,6 +78,6 @@ restartGame.innerHTML = "Play again";
 loseGame.appendChild(restartGame);
 
 const restartWinGame = document.createElement("button");
-restartWinGame.setAttribute("id", "restart");
+restartWinGame.setAttribute("id", "win-restart");
 restartWinGame.innerHTML = "Play again";
 winGame.appendChild(restartWinGame);

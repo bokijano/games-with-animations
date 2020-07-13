@@ -1,4 +1,5 @@
-const playAgain = document.getElementById("restart");
+const playAgainWin = document.getElementById("win-restart");
+const playAgainLose = document.getElementById("restart");
 
 tetrisGame.style.display = "none";
 //homePage.style.display = "none";
@@ -362,7 +363,8 @@ function loop() {
 }
 
 // play again button
-playAgain.addEventListener("click", function () {
+//playAgain.addEventListener("click", function () {
+function playAgain() {
   GAME_OVER = false;
   LIFE = 3;
 
@@ -379,6 +381,14 @@ playAgain.addEventListener("click", function () {
   levelCount.innerHTML = LEVEL;
   scoreCount.innerHTML = SCORE;
   lifeCount.innerHTML = LIFE;
+  console.log("work");
+}
+
+playAgainWin.addEventListener("click", function () {
+  playAgain();
+});
+playAgainLose.addEventListener("click", function () {
+  playAgain();
 });
 
 loop();

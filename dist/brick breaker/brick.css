@@ -117,10 +117,16 @@
   font-size: 70px;
   font-weight: bolder;
   background-color: transparent;
-  margin-top: -15px;
+  margin-top: -18px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
+  .brick-game .stats {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 361px) {
   .brick-game .stats {
     width: 360px;
   }
@@ -211,6 +217,15 @@
   width: 70px;
   height: 70px;
   background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .brick-game .controls .left-move,
+  .brick-game .controls .right-move {
+    margin: 35px 20px 0 20px;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .brick-game .controls .left-move {

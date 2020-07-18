@@ -97,20 +97,20 @@ function movePaddle() {
 // create controls for mobile device
 let moveLeft = document.createElement("span");
 moveLeft.setAttribute("class", "left-move");
-moveLeft.onclick = function () {
+moveLeft.addEventListener("click", function () {
   if (paddle.x > 0) {
     paddle.x -= paddle.dx * 2;
   }
-};
+});
 brickControls.appendChild(moveLeft);
 
 let moveRight = document.createElement("span");
 moveRight.setAttribute("class", "right-move");
-moveRight.onclick = function () {
+moveRight.addEventListener("click", function () {
   if (paddle.x + paddle.width < cvs.width) {
     paddle.x += paddle.dx * 2;
   }
-};
+});
 brickControls.appendChild(moveRight);
 
 // create the ball
@@ -119,8 +119,8 @@ const ballBreak = {
   y: paddle.y - BALL_RADIUS,
   radius: BALL_RADIUS,
   speed: 6,
-  dx: 4 * (Math.random() * 2 - 1),
-  dy: -4,
+  dx: 3 * (Math.random() * 2 - 1),
+  dy: -3,
 };
 
 // draw the ball
